@@ -1,14 +1,14 @@
--injars 'C:\Users\Mantas\Desktop\rollingspidersample\app\build\intermediates\multi-dex\debug\allclasses.jar'
--outjars 'C:\Users\Mantas\Desktop\rollingspidersample\app\build\intermediates\multi-dex\debug\componentClasses.jar'
+-injars /home/tlater/Documents/hackathon/burrito/app/build/intermediates/multi-dex/debug/allclasses.jar
+-outjars /home/tlater/Documents/hackathon/burrito/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars 'C:\Users\Mantas\AppData\Local\Android\sdk\build-tools\21.1.1\lib\shrinkedAndroid.jar'
+-libraryjars /home/tlater/Android/Sdk/build-tools/21.1.1/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontpreverify
 -dontwarn
--printconfiguration 'C:\Users\Mantas\Desktop\rollingspidersample\app\build\intermediates\multi-dex\debug\components.flags'
+-printconfiguration /home/tlater/Documents/hackathon/burrito/app/build/intermediates/multi-dex/debug/components.flags
 
 
 -keep class null {

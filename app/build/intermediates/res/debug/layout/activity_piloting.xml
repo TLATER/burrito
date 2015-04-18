@@ -167,4 +167,4 @@
         android:layout_alignEnd="@+id/gazDownBt"
         android:gravity="center_horizontal"/>
 </RelativeLayout>
-<!-- From: file:/C:/Users/Mantas/Desktop/rollingspidersample/app/src/main/res/layout/activity_piloting.xml -->
+<!-- From: file:/home/tlater/Documents/hackathon/burrito/app/src/main/res/layout/activity_piloting.xml -->

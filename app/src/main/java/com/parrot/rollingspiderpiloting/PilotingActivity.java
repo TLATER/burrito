@@ -503,9 +503,41 @@ public class PilotingActivity extends Activity implements DeviceControllerListen
                     Log.d("object", (String) text);
                     toast.show();
 
+                    // Invert x axis (actually y but stuff is upside down here...)
+                    float xChange = (-1) * (last_x - x);
+                    float zChange = last_z - z;
+
+                    CharSequence movement = "roll: " + xChange + " pitch: " + zChange;
+
+                    if (xChange < 5 && xChange > -5)
+                        deviceController.setRoll((byte) xChange);
+                    else
+                        if (xChange > 0)
+                            deviceController.setRoll((byte) 5);
+                        else
+                            deviceController.setRoll((byte) -5);
+
+                    if (zChange - z < 5 && zChange > -5)
+                        deviceController.setPitch((byte) zChange);
+                    else
+                        if (zChange > 0)
+                            deviceController.setPitch((byte) 5);
+                        else
+                            deviceController.setPitch((byte) -5);
+
+                    // Since y starts at 9, normalize it to 0
+                    float yChange = 9 - (y - last_y);
+                    if (yChange < 2 && yChange > 2)
+                        deviceController.setGaz((byte) yChange);
+
+                    CharSequence height = "y: " + yChange;
+
+                    deviceController.setFlag((byte) 1);
+
                     try {
                         Thread.sleep(500);
-                    } catch (InterruptedException e) {
+                    }
+                    catch (InterruptedException e) {
                         e.printStackTrace();
                     }
 

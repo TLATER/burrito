@@ -1,1 +1,1 @@
-C:\Users\Mantas\Desktop\rollingspidersample\app\build\intermediates\multi-dex\debug\allclasses.jar
+/home/tlater/Documents/hackathon/burrito/app/build/intermediates/multi-dex/debug/allclasses.jar
