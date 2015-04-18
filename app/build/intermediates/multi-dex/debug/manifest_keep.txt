@@ -1,0 +1,13 @@
+-keep class null {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.parrot.rollingspiderpiloting.MainActivity { <init>(); }
+-keep class com.parrot.rollingspiderpiloting.PilotingActivity { <init>(); }
+-keep class com.parrot.arsdk.ardiscovery.ARDiscoveryService { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
