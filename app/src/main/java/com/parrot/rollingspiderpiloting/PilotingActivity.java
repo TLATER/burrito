@@ -62,7 +62,7 @@ public class PilotingActivity extends Activity implements DeviceControllerListen
 
     private long lastUpdate = 0;
     private float last_x, last_y, last_z;
-    private static final int SHAKE_THRESHOLD = 600;
+    private static final int SHAKE_THRESHOLD = 100;
 
     AsyncHttpClient client;
 
@@ -496,11 +496,19 @@ public class PilotingActivity extends Activity implements DeviceControllerListen
 
                 if (speed > SHAKE_THRESHOLD) {
                     Context context = getApplicationContext();
-                    CharSequence text = "Hello toast! the speed"+speed;
+                    CharSequence text = "x: "+x+" y: " + y+" z: " + z ;
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);
+                    Log.d("object", (String) text);
                     toast.show();
+
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
                 }
 
                 last_x = x;
